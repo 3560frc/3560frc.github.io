@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>3560 ChingBotics</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!---THE SLIDE ANIMATIONS TO MAKE IT LOOK CRISP-->
+    <style>
+
+        .yes {
+            width: 50%;
+        }
+
+        .vertical-center {
+            display: flex;
+            align-items: center;
+        }
+
+        .slideanim {visibility:hidden;}
+        .slide {
+        /* The name of the animation */
+        animation-name: slide;
+        -webkit-animation-name: slide;
+        /* The duration of the animation */
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        /* Make the element visible */
+        visibility: visible;
+        }
+
+        /* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+        @keyframes slide {
+        0% {
+            opacity: 0;
+            transform: translateY(70%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+        }
+        @-webkit-keyframes slide {
+        0%{
+            opacity: 0;
+            -webkit-transform: translateY(70%);
+            }
+        100%{
+            opacity: 1;
+            -webkit-transform: translateY(0%);
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!--The Relevant Slide JQuery Garbage-->
+    <script>
+        $(window).scroll(function() {
+        $(".slideanim").each(function(){
+            var pos = $(this).offset().top;
+    
+            var winTop = $(window).scrollTop();
+            if (pos < winTop + 600) {
+            $(this).addClass("slide");
+            }
+        });
+        });
+    </script>
+
+    <nav class="navbar navbar-expand navbar-light bg-light fixed-top">
+        <div class="nav navbar-nav">
+            <a class="navbar-brand" href="#">
+                <img src="3560.png" height=32 width=27.6>
+            </a>
+            <a class="nav-item nav-link" href="index.html">Home</a>
+            <a class="nav-item nav-link" href="about.html">About</a>
+            <a class="nav-item nav-link active" href="gallery.html">Gallery</a>
+            <a class="nav-item nav-link" href="faq.html">FAQ</a>
+            <a class="nav-item nav-link" href="sponsors.html">Sponsors</a>
+            <a class="nav-item nav-link" href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid vertical-center bg-info">
+        <div class="container text-center" style="margin-top: 5%;">
+            <h1 class="display-3 text-white">Gallery</h1>
+            <p class="lead text-white">Images of our Exploits</p>
+            <p class="lead text-white">
+                <a class="btn btn-primary btn-lg" href="index.html" role="button">Go Back Home</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 slideanim text-center">
+                <img src="robotrepair1.jpg" class='yes'>
+                <h3>Some quick Repairs</h3>
+                <p>Students work hard to bring the robot home for some finishing touches</p>
+            </div>
+            <div class="col-sm-6 slideanim text-center">
+                <img src="robotlove1.jpg" class='yes'>
+                <h3>Love and Affection</h3>
+                <p>Even robots deserve love!</p>
+            </div>
+            <div class="col-sm-6 slideanim text-center">
+                <img src="roboteducation1.jpg" class='yes'>
+                <h3>Education</h3>
+                <p>Our teachers help spread the word!</p>
+            </div>
+            <div class="col-sm-6 slideanim text-center">
+                <img src="planning1.png" class='yes'>
+                <h3>Planning</h3>
+                <p>Our students plan out the design of the robot!</p>
+            </div>
+            <div class="col-sm-6 slideanim text-center">
+                <img src="teampic1.png" class='yes'>
+                <h3>Team Picture</h3>
+                <p>Our team in 2014</p>
+            </div>
+            <div class="col-sm-6 slideanim text-center">
+                <img src="teaching1.jpg" class='yes'>
+                <h3>Teaching</h3>
+                <p>Our students passing on important skills</p>
+            </div>
+            <div class="col-sm-6 slideanim text-center">
+                <img src="competition1.png" class='yes'>
+                <h3>Competition</h3>
+                <p>Our students enjoy the thrill of the competition</p>
+            </div>
+            <div class="col-sm-6 slideanim text-center">
+                <img src="teampic2.jpg" class='yes'>
+                <h3>Pride</h3>
+                <p>Our students revel in the reward of hard work</p>
+            </div>
+            <div class="col-sm-6 slideanim text-center">
+                <img src="maintenance1.png" class='yes'>
+                <h3>Maintenance</h3>
+                <p>Getting the robot in shape!</p>
+            </div>
+            <div class="col-sm-6 slideanim text-center">
+                <img src="competition2.png" class='yes'>
+                <h3>Competition</h3>
+                <p>Excitement is through the roof!</p>
+            </div>
+            <div class="col-sm-6 slideanim text-center">
+                <img src="teampic3.png" class='yes'>
+                <h3>Connections</h3>
+                <p>Our students bonding and having fun!</p>
+            </div>
+            <div class="col-sm-6 slideanim text-center">
+                <img src="competition3.png" class='yes'>
+                <h3>Competition</h3>
+                <p>The Huge Community meets up!</p>
+            </div>
+            <div class="col-sm-6 slideanim text-center">
+                <img src="maintenance2.png" class='yes'>
+                <h3>Maintenance</h3>
+                <p>Our students working hard!</p>
+            </div>
+            <div class="col-sm-6 slideanim text-center">
+                <img src="control1.png" class='yes'>
+                <h3>Control</h3>
+                <p>Sometimes videogames do come in handy!</p>
+            </div>
+            <div class="col-sm-6 slideanim text-center">
+                <img src="robot1.png" class='yes'>
+                <h3>Robot</h3>
+                <p>Culmination of hours of work, from many talented students</p>
+            </div>
+        </div>
+    </div>
+
+  </body>
+</html>

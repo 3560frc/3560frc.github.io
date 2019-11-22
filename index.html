@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>3560 ChingBotics</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!---THE SLIDE ANIMATIONS TO MAKE IT LOOK CRISP-->
+    <style>
+        .slideanim {visibility:hidden;}
+        .slide {
+        /* The name of the animation */
+        animation-name: slide;
+        -webkit-animation-name: slide;
+        /* The duration of the animation */
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        /* Make the element visible */
+        visibility: visible;
+        }
+
+        /* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+        @keyframes slide {
+        0% {
+            opacity: 0;
+            transform: translateY(70%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+        }
+        @-webkit-keyframes slide {
+        0%{
+            opacity: 0;
+            -webkit-transform: translateY(70%);
+            }
+        100%{
+            opacity: 1;
+            -webkit-transform: translateY(0%);
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!--The Relevant Slide JQuery Garbage-->
+    <script>
+        $(window).scroll(function() {
+        $(".slideanim").each(function(){
+            var pos = $(this).offset().top;
+    
+            var winTop = $(window).scrollTop();
+            if (pos < winTop + 600) {
+            $(this).addClass("slide");
+            }
+        });
+        });
+    </script>
+
+    <nav class="navbar navbar-expand navbar-light bg-light fixed-top">
+        <div class="nav navbar-nav">
+            <a class="navbar-brand" href="#">
+                <img src="3560.png" height=32 width=27.6>
+            </a>
+            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="about.html">About</a>
+            <a class="nav-item nav-link" href="gallery.html">Gallery</a>
+            <a class="nav-item nav-link" href="faq.html">FAQ</a>
+            <a class="nav-item nav-link" href="sponsors.html">Sponsors</a>
+            <a class="nav-item nav-link" href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid" style="height: 100vh;">
+        <div class="container text-center">
+            <img src="3560.png" width=276 height=320>
+            <h1 class="display-3">ChingBotics</h1>
+            <p class="lead">FRC 3560</p>
+            <hr class="my-2">
+            <p>FRC team from Brampton, ON</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="about.html" role="button">Check us Out</a>
+            </p>
+        </div>
+    </div>
+  </body>
+</html>

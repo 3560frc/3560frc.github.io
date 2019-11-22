@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>3560 ChingBotics</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!---THE SLIDE ANIMATIONS TO MAKE IT LOOK CRISP-->
+    <style>
+
+        .vertical-center {
+            min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+            min-height: 100vh; /* These two lines are counted as one :-)       */
+
+            display: flex;
+            align-items: center;
+        }
+
+        .slideanim {visibility:hidden;}
+        .slide {
+        /* The name of the animation */
+        animation-name: slide;
+        -webkit-animation-name: slide;
+        /* The duration of the animation */
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        /* Make the element visible */
+        visibility: visible;
+        }
+
+        /* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+        @keyframes slide {
+        0% {
+            opacity: 0;
+            transform: translateY(70%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+        }
+        @-webkit-keyframes slide {
+        0%{
+            opacity: 0;
+            -webkit-transform: translateY(70%);
+            }
+        100%{
+            opacity: 1;
+            -webkit-transform: translateY(0%);
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!--The Relevant Slide JQuery Garbage-->
+    <script>
+        $(window).scroll(function() {
+        $(".slideanim").each(function(){
+            var pos = $(this).offset().top;
+    
+            var winTop = $(window).scrollTop();
+            if (pos < winTop + 600) {
+            $(this).addClass("slide");
+            }
+        });
+        });
+    </script>
+
+    <nav class="navbar navbar-expand navbar-light bg-light fixed-top">
+        <div class="nav navbar-nav">
+            <a class="navbar-brand" href="#">
+                <img src="3560.png" height=32 width=27.6>
+            </a>
+            <a class="nav-item nav-link" href="index.html">Home</a>
+            <a class="nav-item nav-link" href="about.html">About</a>
+            <a class="nav-item nav-link" href="gallery.html">Gallery</a>
+            <a class="nav-item nav-link active" href="faq.html">FAQ</a>
+            <a class="nav-item nav-link" href="sponsors.html">Sponsors</a>
+            <a class="nav-item nav-link" href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid bg-info">
+        <div class="container text-center" style="margin-top: 5%;">
+            <h1 class="display-3 text-white">Frequently Asked Questions</h1>
+            <p class="lead text-white">About our team and FRC</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="index.html" role="button">Go Back Home</a>
+            </p>
+        </div>
+    </div>
+
+    <!--Basic Question Format 100% will be CopyPasted by Me-->
+    <div class="container">
+        <div class="row">
+            <div class='col-sm-1'></div>
+            <div class="col-sm-10">
+                <ul class="list-group">
+                    <li class="list-group-item slideanim">
+                        <!--Question-->
+                        <h3>Who are you?</h3>
+                        <!--Answer-->
+                        We are a team of designers, technicians, and programmers who help design robots.<br>
+                        <a style="margin-top: 10px;" target='_blank' class="btn btn-primary" href="about.html" role="button">Find out More</a>
+                    </li>
+                    <li class="list-group-item slideanim">
+                        <!--Question-->
+                        <h3>Where are you?</h3>
+                        <!--Answer-->
+                        Our team is based out of Chinguacousy S.S in Brampton, Ontario. We particiapte in the Waterloo Region for FRC<br>
+                        <a style="margin-top: 10px;" target='_blank' class="btn btn-primary" href="http://schools.peelschools.org/sec/chinguacousy/Pages/default.aspx" role="button">Our School Website</a>
+                    </li>
+                    <li class="list-group-item slideanim">
+                        <!--Question-->
+                        <h3>What is FRC?</h3>
+                        <!--Answer-->
+                        FRC (or First Robotics Competition) is a large global robotics competition, created by First.<br>
+                        <a style="margin-top: 10px;" target='_blank' class="btn btn-primary" href="https://www.firstinspires.org/robotics/frc" role="button">FRC Website</a>
+                    </li>
+                </ul>
+            </div>
+            <div class='col-sm-1'></div>
+        </div>
+    </div>
+  </body>
+</html>
