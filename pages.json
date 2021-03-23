@@ -1,0 +1,10 @@
+{
+    "home": {
+        "title": "Home",
+        "path": ""
+    },
+    "test": {
+        "title": "Test Page",
+        "path": "test"
+    }
+}

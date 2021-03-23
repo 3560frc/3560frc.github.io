@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='assets/css/noscript.css') }}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+			<div id="page-wrapper">
+
+					<header id="header" class="alt">
+						<h1><a href="{{ url_for('page') }}">3560 - Chingbotics</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								{% for page in pages %}
+								<li><a href="{{ url_for('page', path=pages[page]['path']) }}">{{ pages[page]['title'] }}</a></li>
+								{% endfor %}
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+					<section id="banner">
+						<div class="inner">
+							{% block banner %}
+                            {% endblock %}
+						</div>
+					</section>
+
+					<section id="wrapper">
+                        {% block content %}
+                        {% endblock %}
+					</section>
+
+					<section id="footer">
+						<div class="inner">
+                            {% block footer %}
+                            {% endblock %}
+						</div>
+					</section>
+
+			</div>
+
+		<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+		<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+	</body>
+</html>
